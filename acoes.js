@@ -3,15 +3,17 @@ function pesoaltura() {
     let altura = document.getElementById("altura").value;
 
     let imc = peso / (altura * altura);
-    let resultado = imc.toFixed(2);
+    let imcformatado = imc.toFixed(2);
+
+    document.getElementById("resultado").textContent = "seu imc é " + imcformatado;
 
     if (imc < 18.5) {
-        document.getElementById(classificao).textContent ="voce esta abaixo do peso";
+        document.getElementById("classificacao").textContent = "você está abaixo do peso";
     }
     else if (imc < 24.9) {
-        document.getElementById(classificacao).textContent ="voce esta com o peso normal";
+        document.getElementById("classificacao").textContent = "você está com o peso normal";
     }
     else if (imc < 29.9) {
-        document.getElementById(classificacao).textContent ="voce esta com sobrepeso";
+        document.getElementById("classificacao").textContent = "você está com sobrepeso";
     }
 }
